@@ -59,7 +59,7 @@ TRADE_LOGS_DIR = "trade_logs"      # Directory for trade logs
 TRADES_FILE = f"{TRADE_LOGS_DIR}/trades.txt"                    # Trade history file
 RECORDED_ORDERS_FILE = f"{TRADE_LOGS_DIR}/recorded_orders.txt"  # Order tracking file
 LOG_FILE = f"{TRADE_LOGS_DIR}/trading_bot.log"                  # Main log file
-OPEN_POSITIONS_FILE = f"{TRADE_LOGS_DIR}/open_positions.txt"    # Open positions file
+OPEN_POSITIONS_FILE = f"{TRADE_LOGS_DIR}/open_positions_{{exchange}}.txt"    # Open positions file template
 SESSIONS_DIR = f"{TRADE_LOGS_DIR}/sessions"                     # Session summaries directory
 
 # API Settings

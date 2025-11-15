@@ -3,6 +3,7 @@
 import os
 import time
 import logging
+import config
 
 logger = logging.getLogger(__name__)
 
@@ -10,7 +11,7 @@ logger = logging.getLogger(__name__)
 def save_open_positions(open_positions, exchange='kraken'):
     """Save open positions to disk for persistence across restarts"""
     try:
-        filename = f"open_positions_{exchange}.txt"
+        filename = f"{config.TRADE_LOGS_DIR}/open_positions_{exchange}.txt"
         with open(filename, "w") as f:
             for position in open_positions:
                 f.write(str(position) + "\n")
@@ -23,7 +24,7 @@ def load_open_positions(exchange='kraken'):
     """Load open positions from disk on startup"""
     open_positions = []
     try:
-        filename = f"open_positions_{exchange}.txt"
+        filename = f"{config.TRADE_LOGS_DIR}/open_positions_{exchange}.txt"
         if os.path.exists(filename):
             with open(filename, "r") as f:
                 for line in f:
