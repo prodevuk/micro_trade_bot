@@ -1,0 +1,11 @@
+requests
+python-dotenv
+pandas
+pytest
+scikit-learn
+numpy
+joblib
+bitmart-python-sdk-api
+rich
+colorama
+
